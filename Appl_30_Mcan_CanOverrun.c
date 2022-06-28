@@ -6,7 +6,7 @@ static uint8 errorsCanOverrun  = 0u;
 
 V_DEF_30_MCAN_FUNC(extern, void, APPL_CODE) Appl_30_Mcan_CanOverrun ( uint8 Controller )
 {     
-    if(errorsCanOverrun < UINT8_MAX_NUMBER)
+    if(UINT8_MAX_NUMBER > errorsCanOverrun)
     {
       errorsCanOverrun = 0;
     }
